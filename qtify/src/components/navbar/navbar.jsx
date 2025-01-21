@@ -11,7 +11,7 @@ const Navbar =()=>{
         <nav className={styles.navBar}>
         <Logo/>
         <Search search={"Search a song of your choice"}/>
-        <Button children="GIVE FEEDBACK"/>
+        <Button children="Give Feedback"/>
     </nav>
         </>
     );
