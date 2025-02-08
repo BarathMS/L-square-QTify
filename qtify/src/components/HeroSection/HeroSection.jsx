@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./HeroSection.module.css"
-import HeroImage from "../../Assets/vibrating-headphone.png"
+import HeroImage from "../../assets/vibrating-headphone.png"
 const HeroSection =()=>{
 return(
     <div className={styles.HeroContainer}>

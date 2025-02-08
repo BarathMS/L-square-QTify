@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./navbar.module.css"
 import Logo from "../Logo/logo";
-import Search from "../search/Search";
+import Search from "../SearchBar/SearchBar";
 import Button from "../Button/Button"
 
 
