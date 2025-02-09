@@ -1,40 +1,48 @@
 import axios from "axios";
-export const BACKEND_ENPOINT="https://qtify-backend-labs.crio.do";
 
-// function to get the Top-albums data from backend api
-export const fetchTopAlbums=async()=>{
-    try{
-        const res= await axios.get(`${BACKEND_ENPOINT}/albums/top`);
-        // console.log(res.data);
-        return res.data;
-    }
-    catch(error){
-        // console.log(error);
-        return null;
-    }
-    
-}
+const config = {
+    endpoint: {
+        TopAlbum: "https://qtify-backend-labs.crio.do/albums/top",
+        NewAlbum: "https://qtify-backend-labs.crio.do/albums/new",
+        Songs: "https://qtify-backend-labs.crio.do/songs",
+        genres: "https://qtify-backend-labs.crio.do/genres",
+    },
+};
 
-// function to get the New-albums data from backend api
-export const fetchNewAlbums=async()=>{
-    try{
-        const res= await axios.get(`${BACKEND_ENPOINT}/albums/new`);
-        console.log(res.data);
+const fetchTopAlbum = async() => {
+    try {
+        let res = await axios.get(config.endpoint.TopAlbum);
         return res.data;
+    } catch (err) {
+        return new Error("Failed to Fetch !", err);
     }
-    catch(error){
-        console.log(error);
-        return null;
-    }
-    
-}
+};
 
-export const fetchSongs=async()=>{
-    try{
-        const res=await axios.get(`${BACKEND_ENPOINT}/songs`)
+const fetchNewAlbum = async() => {
+    try {
+        let res = await axios.get(config["endpoint"]["NewAlbum"]);
         return res.data;
+    } catch (err) {
+        return new Error("Failed to Fetch !", err);
     }
-    catch(error){
-        return null;
+};
+
+const fetchSongs = async() => {
+    try {
+        let res = await axios.get(config.endpoint.Songs);
+        return res.data;
+    } catch (err) {
+        return new Error("Failed to Fetch !", err);
     }
-}
+};
+
+const fetchGenres = async() => {
+    try {
+        let res = await axios.get(config["endpoint"].genres);
+        return res.data;
+    } catch (err) {
+        return new Error("Failed to Fetch !", "err");
+    }
+};
+
+export { fetchTopAlbum, fetchNewAlbum, fetchSongs, fetchGenres };
