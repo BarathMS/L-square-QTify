@@ -1,7 +1,7 @@
 import React from "react";
 import sectionStyles from "../Section/Section.module.css";
 import Hero from "../Hero/Hero";
-import Navbar from "../navbar/Navbar";
+import Navbar from "../navbar/navbar";
 import Section from "../Section/Section";
 import { useState, useEffect } from "react";
 import {
