@@ -1,5 +1,5 @@
 import { useState } from "react";
-import searchIcon from "../../assets/searchIcon.svg";
+import searchIcon from "../../Assets/searchIcon.svg";
 import styles from "./search.module.css";
 import navbarStyles from "../navbar/navbar.module.css";
 
